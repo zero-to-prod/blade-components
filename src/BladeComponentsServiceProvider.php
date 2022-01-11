@@ -5,6 +5,7 @@ namespace ZeroToProd\BladeComponents;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use ZeroToProd\BladeComponents\Components\Box\Box;
+use ZeroToProd\BladeComponents\Components\Link\Link;
 
 class BladeComponentsServiceProvider extends PackageServiceProvider
 {
@@ -12,6 +13,7 @@ class BladeComponentsServiceProvider extends PackageServiceProvider
     {
         $this->loadViewComponentsAs(null, [
             Box::class,
+            Link::class,
         ]);
         $this->loadViewsFrom(__DIR__.'/Components', 'zero-to-prod');
         $this->publishes([

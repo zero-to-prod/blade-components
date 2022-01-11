@@ -50,6 +50,18 @@ Equivalent usage
 <x-box flex/>
 ```
 
+### Link
+```html
+<x-link href="www.foo.com">Foo</x-link>
+
+<!-- Attributes -->
+<x-link hidden/>
+<x-link underline="none"/>
+<x-link underline="always"/>
+<x-link underline="hover"/>
+<x-link disableAutoTitle/>
+```
+
 ## Testing
 
 ```bash
