@@ -5,3 +5,8 @@
 .hidden {
   display: none
 }
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline
+}
