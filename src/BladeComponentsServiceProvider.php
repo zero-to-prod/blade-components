@@ -14,6 +14,9 @@ class BladeComponentsServiceProvider extends PackageServiceProvider
             Box::class,
         ]);
         $this->loadViewsFrom(__DIR__.'/Components', 'zero-to-prod');
+        $this->publishes([
+            __DIR__.'/../dist' => public_path('zero-to-prod/blade-components'),
+        ], 'public');
     }
 
     public function configurePackage(Package $package): void
