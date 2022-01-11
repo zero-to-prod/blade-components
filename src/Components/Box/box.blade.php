@@ -4,9 +4,7 @@
     /** @var $flex boolean */
 @endphp
 @if(!$hidden)
-    <div {{$attributes->class([
-    'flex' => $flex
-])}} {{ $attributes }}>
+    <div {{$attributes->class(['flex' => $flex])->merge()}}>
         {{$slot}}
     </div>
 @endif

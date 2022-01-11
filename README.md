@@ -1,33 +1,15 @@
 # Blade components for the Laravel Framework
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zerotoprod/blade-components.svg?style=flat-square)](https://packagist.org/packages/zerotoprod/blade-components)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/zerotoprod/blade-components/run-tests?label=tests)](https://github.com/zerotoprod/blade-components/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/zerotoprod/blade-components/Check%20&%20fix%20styling?label=code%20style)](https://github.com/zerotoprod/blade-components/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/zerotoprod/blade-components.svg?style=flat-square)](https://packagist.org/packages/zerotoprod/blade-components)
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/blade-components.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/blade-components)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/zero-to-prod/blade-components.svg?style=flat-square)](https://packagist.org/packages/zero-to-prod/blade-components)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/zero-to-prod/blade-components/run-tests?label=tests)](https://github.com/zero-to-prod/blade-components/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/zero-to-prod/blade-components.svg?style=flat-square)](https://packagist.org/packages/zero-to-prod/blade-components)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require zerotoprod/blade-components
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="blade-components-migrations"
-php artisan migrate
+composer require zero-to-prod/blade-components
 ```
 
 You can publish the config file with:
@@ -50,10 +32,22 @@ php artisan vendor:publish --tag="blade-components-views"
 ```
 
 ## Usage
+### Notes
+Equivalent usage
+```html
+<x-box hidden/>
+<x-box hidden="{{$hidden}}"/>
+<x-box hidden="1"/>
+<x-box :hidden="true"/>
+<x-box :hidden="$hidden"/>
+```
+### Box
+```html
+<x-box>Foo</x-box>
 
-```php
-$bladeComponents = new ZeroToProd\BladeComponents();
-echo $bladeComponents->echoPhrase('Hello, ZeroToProd!');
+<!-- Attributes -->
+<x-box hidden/>
+<x-box flex/>
 ```
 
 ## Testing
@@ -77,7 +71,6 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## Credits
 
 - [D.A.Smith](https://github.com/zero-to-prod)
-- [All Contributors](../../contributors)
 
 ## License
 
