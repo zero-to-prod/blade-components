@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ZeroToProd\BladeComponents\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class BladeComponentsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'b';
 
     public $description = 'My command';
 
