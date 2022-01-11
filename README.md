@@ -63,7 +63,40 @@ Equivalent usage
 <x-link new/>
 <x-link disableAutoTitle/>
 ```
+### Container
+```html
+<x-container>Foo</x-container>
 
+<!-- Attributes -->
+<x-container hidden/>
+<x-container disableGutters/>
+<x-container hidden/>
+<x-container max-width="0"/>
+<x-container max-width="none"/>
+<x-container max-width="xs"/>
+<x-container max-width="sm"/>
+<x-container max-width="md"/>
+<x-container max-width="lg"/>
+<x-container max-width="xl"/>
+<x-container max-width="2"/>
+<x-container max-width="3"/>
+<x-container max-width="4"/>
+<x-container max-width="5"/>
+<x-container max-width="6"/>
+<x-container max-width="7"/>
+<x-container max-width="full"/>
+<x-container max-width="min"/>
+<x-container max-width="max"/>
+<x-container max-width="fit"/>
+<x-container max-width="prose"/>
+<x-container max-width="screen-sm"/>
+<x-container max-width="screen-md"/>
+<x-container max-width="screen-lg"/>
+<x-container max-width="screen-xl"/>
+<x-container max-width="screen-2xl"/>
+
+
+```
 ## Testing
 
 ```bash
