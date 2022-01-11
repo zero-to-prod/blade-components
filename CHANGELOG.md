@@ -2,6 +2,12 @@
 
 All notable changes to `blade-components` will be documented in this file.
 
+## v1.2.0 - 2022-01-11
+
+### Added
+
+- Link
+
 ## v1.1.0 - 2022-01-11
 
 ### Added
