@@ -7,8 +7,12 @@ use Illuminate\View\View;
 
 class Link extends Component
 {
-    public function __construct(public ?bool $hidden = false, public ?string $underline = null, public ?bool $disableAutoTitle = false)
-    {
+    public function __construct(
+        public ?bool $hidden = false,
+        public ?string $underline = null,
+        public ?bool $new = false,
+        public ?bool $disableAutoTitle = false
+    ) {
     }
 
     public function render(): View

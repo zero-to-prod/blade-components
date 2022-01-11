@@ -96,4 +96,28 @@ class LinkTest extends TestCase
 
         $this->assertComponentRenders($expected, '<x-link underline="always">foo</x-link>');
     }
+
+    /**
+     * @test
+     */
+    public function new_attribute(): void
+    {
+        $expected = <<<'HTML'
+            <a target="_blank" class="">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link new>foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
+    public function new_attribute_default(): void
+    {
+        $expected = <<<'HTML'
+            <a target="_blank" class="">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link target="_blank">foo</x-link>');
+    }
 }
