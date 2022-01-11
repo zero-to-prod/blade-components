@@ -59,6 +59,8 @@ Equivalent usage
 <x-link underline="none"/>
 <x-link underline="always"/>
 <x-link underline="hover"/>
+<!-- Equivalent to  target="_blank"-->
+<x-link new/>
 <x-link disableAutoTitle/>
 ```
 
