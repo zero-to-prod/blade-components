@@ -31,6 +31,79 @@ class ContainerTest extends TestCase
     /**
      * @test
      */
+    public function color(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl text-red-500">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container color="text-red-500">foo</x-container>');
+    }
+
+    /**
+     * @test
+     */
+    public function margin(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl m-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container margin="m-2">foo</x-container>');
+    }
+
+    /**
+     * @test
+     */
+    public function padding(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl p-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container padding="p-2">foo</x-container>');
+    }
+
+    /**
+     * @test
+     */
+    public function size(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl h-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container size="h-2">foo</x-container>');
+    }
+
+    /**
+     * @test
+     */
+    public function textSize(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl text-sm">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container textSize="text-sm">foo</x-container>');
+    }
+
+    /**
+     * @test
+     */
+    public function flex(): void
+    {
+        $expected = <<<'HTML'
+            <div class="mx-auto px-4 max-w-7xl flex">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-container flex="flex">foo</x-container>');
+    }
+
+
+    /**
+     * @test
+     */
     public function hidden(): void
     {
         $this->assertComponentRenders('', '<x-container hidden>foo</x-container>');
