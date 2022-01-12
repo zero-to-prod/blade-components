@@ -12,9 +12,7 @@ class BoxTest extends TestCase
     public function default_render(): void
     {
         $expected = <<<'HTML'
-            <div class="">
-                foo
-            </div>
+            <div class="">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box>foo</x-box>');
@@ -61,12 +59,24 @@ class BoxTest extends TestCase
      *
      * @see
      */
+    public function tag(): void
+    {
+        $expected = <<<'HTML'
+            <span class="">foo</span>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box tag="span">foo</x-box>');
+    }
+
+    /**
+     * @test
+     *
+     * @see
+     */
     public function render_flex_class(): void
     {
         $expected = <<<'HTML'
-            <div class="flex">
-                foo
-            </div>
+            <div class="flex">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box flex>foo</x-box>');
@@ -80,9 +90,7 @@ class BoxTest extends TestCase
     public function render_flex_class_colon(): void
     {
         $expected = <<<'HTML'
-            <div class="flex">
-                foo
-            </div>
+            <div class="flex">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box :flex="true">foo</x-box>');
@@ -96,9 +104,7 @@ class BoxTest extends TestCase
     public function render_flex_class_int(): void
     {
         $expected = <<<'HTML'
-            <div class="flex">
-                foo
-            </div>
+            <div class="flex">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box flex="1">foo</x-box>');
@@ -112,9 +118,7 @@ class BoxTest extends TestCase
     public function render_flex_class_int_0(): void
     {
         $expected = <<<'HTML'
-            <div class="">
-                foo
-            </div>
+            <div class="">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box flex="0">foo</x-box>');
@@ -128,9 +132,7 @@ class BoxTest extends TestCase
     public function render_flex_class_override(): void
     {
         $expected = <<<'HTML'
-            <div class="flex">
-                foo
-            </div>
+            <div class="flex">foo</div>
             HTML;
 
         $this->assertComponentRenders($expected, '<x-box class="flex">foo</x-box>');

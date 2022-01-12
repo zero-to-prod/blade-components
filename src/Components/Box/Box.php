@@ -9,6 +9,7 @@ class Box extends Component
 {
     public function __construct(
         public ?bool $hidden = false,
+        public ?string $tag = 'div',
         public ?bool $flex = false
     ) {
     }

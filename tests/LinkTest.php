@@ -19,6 +19,18 @@ class LinkTest extends TestCase
     /**
      * @test
      */
+    public function tag(): void
+    {
+        $expected = <<<'HTML'
+            <a class=""><h1>foo</h1></a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link tag="h1">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
     public function href_and_title(): void
     {
         $expected = <<<'HTML'
