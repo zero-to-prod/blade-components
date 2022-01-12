@@ -31,6 +31,79 @@ class LinkTest extends TestCase
     /**
      * @test
      */
+    public function color(): void
+    {
+        $expected = <<<'HTML'
+            <a class="text-red-500">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link color="text-red-500">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
+    public function margin(): void
+    {
+        $expected = <<<'HTML'
+            <a class="m-2">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link margin="m-2">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
+    public function padding(): void
+    {
+        $expected = <<<'HTML'
+            <a class="p-2">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link padding="p-2">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
+    public function size(): void
+    {
+        $expected = <<<'HTML'
+            <a class="h-2">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link size="h-2">foo</x-link>');
+    }
+
+
+    /**
+     * @test
+     */
+    public function textSize(): void
+    {
+        $expected = <<<'HTML'
+            <a class="text-sm">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link textSize="text-sm">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
+    public function flex(): void
+    {
+        $expected = <<<'HTML'
+            <a class="flex">foo</a>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-link flex="flex">foo</x-link>');
+    }
+
+    /**
+     * @test
+     */
     public function href_and_title(): void
     {
         $expected = <<<'HTML'
