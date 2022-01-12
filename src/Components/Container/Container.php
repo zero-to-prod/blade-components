@@ -9,6 +9,7 @@ class Container extends Component
 {
     public function __construct(
         public ?bool $hidden = false,
+        public ?string $tag = 'div',
         public ?bool $disableGutters = false,
         public ?string $maxWidth = '7'
     ) {

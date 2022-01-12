@@ -13,5 +13,5 @@
     ])->merge([
     'title' => $disableAutoTitle ? null: $attributes['href'],
     'target' => $new ? '_blank' : null
-    ])}}>{{ $slot }}</a>
+    ])}}>{!! $tag !== null ? "<$tag>": null !!}{{ $slot }}{!!$tag !== null ? "</$tag>": null !!}</a>
 @endif
