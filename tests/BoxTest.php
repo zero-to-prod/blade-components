@@ -70,6 +70,78 @@ class BoxTest extends TestCase
 
     /**
      * @test
+     */
+    public function color(): void
+    {
+        $expected = <<<'HTML'
+            <div class="text-red-500">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box color="text-red-500">foo</x-box>');
+    }
+
+    /**
+     * @test
+     */
+    public function margin(): void
+    {
+        $expected = <<<'HTML'
+            <div class="m-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box margin="m-2">foo</x-box>');
+    }
+
+    /**
+     * @test
+     */
+    public function padding(): void
+    {
+        $expected = <<<'HTML'
+            <div class="p-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box padding="p-2">foo</x-box>');
+    }
+
+    /**
+     * @test
+     */
+    public function size(): void
+    {
+        $expected = <<<'HTML'
+            <div class="h-2">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box size="h-2">foo</x-box>');
+    }
+
+    /**
+     * @test
+     */
+    public function textSize(): void
+    {
+        $expected = <<<'HTML'
+            <div class="text-sm">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box textSize="text-sm">foo</x-box>');
+    }
+
+    /**
+     * @test
+     */
+    public function flex(): void
+    {
+        $expected = <<<'HTML'
+            <div class="flex">foo</div>
+            HTML;
+
+        $this->assertComponentRenders($expected, '<x-box flex="flex">foo</x-box>');
+    }
+
+    /**
+     * @test
      *
      * @see
      */

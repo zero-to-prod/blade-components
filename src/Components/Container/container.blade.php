@@ -2,8 +2,15 @@
     /** @var $attributes \Illuminate\View\ComponentAttributeBag */
     /** @var $hidden boolean */
     /** @var $tag string */
+    /** @var $color string */
+    /** @var $margin string */
+    /** @var $padding string */
+    /** @var $size string */
+    /** @var $textSize string */
+    /** @var $flex string */
     /** @var $disableGutters boolean */
     /** @var $maxWidth string */
+
 @endphp
 @if(!$hidden)
 <{{$tag}} {{ $attributes->class([
@@ -32,5 +39,11 @@
             'max-w-screen-lg'  => $maxWidth === 'screen-lg',
             'max-w-screen-xl'  => $maxWidth === 'screen-xl',
             'max-w-screen-2xl' => $maxWidth === 'screen-2xl',
+            $flex,
+            $color,
+            $margin,
+            $padding,
+            $size,
+            $textSize,
         ])->merge() }}>{{$slot}}</{{$tag}}>
 @endif

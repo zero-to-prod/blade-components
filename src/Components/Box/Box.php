@@ -10,7 +10,12 @@ class Box extends Component
     public function __construct(
         public ?bool $hidden = false,
         public ?string $tag = 'div',
-        public ?bool $flex = false
+        public ?string $color = null,
+        public ?string $margin = null,
+        public ?string $padding = null,
+        public ?string $size = null,
+        public ?string $textSize = null,
+        public ?string $flex = null,
     ) {
     }
     public function render(): View
