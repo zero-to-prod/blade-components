@@ -2,6 +2,19 @@
 
 All notable changes to `blade-components` will be documented in this file.
 
+## v1.6.0 - 2022-01-12
+
+### Added
+
+Elements to Box and Container
+
+- color
+- margin
+- padding
+- size
+- textSize
+- flex
+
 ## v1.5.0 - 2022-01-12
 
 ### Added
