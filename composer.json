@@ -22,6 +22,7 @@
         "spatie/laravel-package-tools": "^1.9.2"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "nunomaduro/collision": "^5.10",
         "orchestra/testbench": "^6.22",
         "pestphp/pest": "^1.21",
@@ -31,8 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ZeroToProd\\BladeComponents\\": "src",
-            "ZeroToProd\\BladeComponents\\Database\\Factories\\": "database/factories"
+            "ZeroToProd\\BladeComponents\\": "src"
         }
     },
     "autoload-dev": {
