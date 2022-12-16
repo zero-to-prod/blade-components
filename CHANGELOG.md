@@ -2,6 +2,10 @@
 
 All notable changes to `blade-components` will be documented in this file.
 
+## v2.0 - 2022-12-16
+
+**Full Changelog**: https://github.com/zero-to-prod/blade-components/compare/v1.6.1...v2.0
+
 ## v1.6.1 - 2022-12-16
 
 ### What's Changed
